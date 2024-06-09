@@ -1,0 +1,512 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden; max-width: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="LpcontentAI: Alpha Test Your Products Pre-Launch. Get valuable feedback from testers before your product goes live.">
+    <meta name="keywords" content="LpcontentAI, alpha test, pre-launch, product testing, feedback, testers, review">
+    <meta name="author" content="LpcontentAI">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="LpcontentAI: Alpha Test Your Products Pre-Launch">
+    <meta property="og:description"
+        content="Get valuable feedback from testers before your product goes live with LpcontentAI.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.LpcontentAI.xyz">
+    <meta property="og:image" content="images">
+    <meta property="og:image"
+        content="https://unpjrqoipuwqbtfujfjf.supabase.co/storage/v1/object/sign/certify/img/web-image-ff.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjZXJ0aWZ5L2ltZy93ZWItaW1hZ2UtZmYucG5nIiwiaWF0IjoxNzE1NzUwNzkzLCJleHAiOjE3NDcyODY3OTN9.URWgrVMMzZO3ZLPnr5F6txNL77kJlgU15rDuANuDbV4&t=2024-05-15T05%3A26%3A33.526Z">
+    <meta property="og:site_name" content="LpcontentAI">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LpcontentAI: Alpha Test Your Products Pre-Launch">
+    <meta name="twitter:description"
+        content="Get valuable feedback from testers before your product goes live with LpcontentAI.">
+    <meta name="twitter:image"
+        content="https://unpjrqoipuwqbtfujfjf.supabase.co/storage/v1/object/sign/certify/img/web-image-ff.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjZXJ0aWZ5L2ltZy93ZWItaW1hZ2UtZmYucG5nIiwiaWF0IjoxNzE1NzUwNzkzLCJleHAiOjE3NDcyODY3OTN9.URWgrVMMzZO3ZLPnr5F6txNL77kJlgU15rDuANuDbV4&t=2024-05-15T05%3A26%3A33.526Z">
+    <meta name="twitter:creator" content="@0xmezard">
+    <title>LpcontentAI</title>
+    <link rel="shortcut icon" href="images/ff-favicon.svg">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'css/tiny-slider.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'css/style.css' %}" rel="stylesheet"> -->
+    <link href="{% static 'css/b.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/4.0.0-alpha.11/lib.min.js"
+        integrity="sha512-xH0vItHyfdY8vYQtTBwb0+5CHvZRLlKgiRg4gak+c8in1oeuquemJ7oM+JGvymgPN93OvagzjUEdQB8BP5GEDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/theme.min.js' %}"></script>
+
+</head>
+
+<body style="overflow-x: hidden; max-width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <div class="container px-3">
+            <a class="navbar-brand"><img src="{% static 'images/logo.svg' %}" alt /></a>
+            <button class="navbar-toggler offcanvas-nav-btn" type="button">
+                <a href="{% url 'generate' %}" > <i class="fa fa-arrow-right"></i> </a>
+            </button>
+
+            <div class="offcanvas offcanvas-start offcanvas-nav" style="width: 20rem">
+                <div class="offcanvas-header">
+                    <a class="text-inverse"><img src="{% static 'images/LpcontentAI-logo.svg' %}" alt /></a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body pt-0 align-items-center">
+                    <ul class="navbar-nav mx-auto align-items-lg-center">
+                       
+                    </ul>
+
+                    <a href="{% url 'generate' %}" class="btn btn-primary" >Generate Free Landing Page Content</a>
+                </div>
+            </div>
+    </nav>
+
+    <!--Hero section start-->
+    <section class="container py-lg-8 py-5" data-cue="fadeIn">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-10 col-12" data-cues="zoomIn" data-group="page-title" data-delay="700">
+                <div class="text-center d-flex flex-column gap-5">
+                    <div class="d-flex justify-content-center">
+                        <!-- <span
+                            class="bg-primary bg-opacity-10 text-primary border-primary border p-2 fs-6 rounded-pill lh-1 d-flex align-items-center">
+                            <span class="badge bg-primary">$0</span>
+                            <span class="ms-2">It's Free !!!</span>
+                        </span> -->
+                    </div>
+                    <div class="d-flex flex-column gap-3 mx-lg-8">
+                        <h1 class="mb-0 display-4">Generate <span style="color: #2323EC;">Landing Page Content</span> in Seconds</h1>
+                        <p class="mb-0 lead">Don't spend much time crafting landing page copy, get your product out there quicker.</p>
+                    </div>
+                    <div class="d-flex flex-row gap-4 justify-content-center">
+                        <a href="{% url 'generate' %}" class="btn btn-primary" >Generate Free Landing Page Content <i class="fa fa-arrow-circle-right"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="pattern-square"></div>
+    <section class="container py-lg-8 py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-12">
+                <div class="text-center position-relative" data-cue="zoomIn">
+                    <img src="{% static 'images/mainframe.svg' %}"
+                        class="img-fluid bg-light p-3 rounded-3 border" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Hero section close-->
+
+
+
+    <!--Features start-->
+    <section class="my-xl-7 py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                    <div class="text-center mb-6 mb-lg-9">
+                        <small class="text-primary text-uppercase ls-md fw-semibold">features</small>
+                        <h2 class="my-3">Generate important sections of your landing page</h2>
+                        <p class="mb-0 lead">Revolutionize your business with our cutting-edge Landing Page Content Generator</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-lg-7 gy-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center text-md-start">
+                        <div class="icon-lg icon-shape rounded bg-primary bg-opacity-10 border border-primary-subtle mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-check-circle text-primary" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                            </svg>
+                        </div>
+    
+                        <h4>Headline</h4>
+                        <p class="mb-0">Generates a catchy and converting headline for your hero section.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center text-md-start">
+                        <div class="icon-lg icon-shape rounded bg-primary bg-opacity-10 border border-primary-subtle mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-flag-fill text-primary" viewBox="0 0 16 16">
+                                <path
+                                    d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001" />
+                            </svg>
+                        </div>
+    
+                        <h4>Subheadline</h4>
+                        <p class="mb-0">Generates a cool subheadline for your product.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center text-md-start">
+                        <div class="icon-lg icon-shape rounded bg-primary bg-opacity-10 border border-primary-subtle mb-5">
+                            <i class="fa fa-fast-forward"></i>
+                        </div>
+    
+                        <h4>CTA Button Copy</h4>
+                        <p class="mb-0">Generates a high converting CTA copy for your product.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center text-md-start">
+                        <div class="icon-lg icon-shape rounded bg-primary bg-opacity-10 border border-primary-subtle mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-layout-text-window-reverse text-primary" viewBox="0 0 16 16">
+                                <path
+                                    d="M13 6.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z" />
+                                <path
+                                    d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM2 1a1 1 0 0 0-1 1v1h14V2a1 1 0 0 0-1-1H2zM1 4v10a1 1 0 0 0 1 1h2V4H1zm4 0v11h9a1 1 0 0 0 1-1V4H5z" />
+                            </svg>
+                        </div>
+    
+                        <h4>Features</h4>
+                        <p class="mb-0">Generates a features section for your landing page, this sections explains the offerings of your product.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center text-md-start">
+                        <div class="icon-lg icon-shape rounded bg-primary bg-opacity-10 border border-primary-subtle mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-paperclip text-primary" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z" />
+                            </svg>
+                        </div>
+    
+                        <h4>Benefits</h4>
+                        <p class="mb-0">Generates a benefits section for your landing page, the benefits section explains the value of your product.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center text-md-start">
+                        <div class="icon-lg icon-shape rounded bg-primary bg-opacity-10 border border-primary-subtle mb-5">
+                            <i class="fa fa-question"></i>
+                        </div>
+                
+                        <h4>FAQs</h4>
+                        <p class="mb-0">Generates 3 suggested FAQs that your visitors might have.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--Features end-->
+
+
+
+    <!--forword together-->
+    <section class="my-lg-9 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                    <div class="text-center mb-xl-7 mb-5">
+                        <h2 class="mb-0">AI-Driven Landing Page Content Genius</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-lg-7 gy-5">
+                <div class="col-lg-4 col-md-4">
+                    <div class="mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                            height="32" fill="currentColor"
+                            class="bi bi-rocket-takeoff text-primary"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M9.752 6.193c.599.6 1.73.437 2.528-.362.798-.799.96-1.932.362-2.531-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532Z" />
+                            <path
+                                d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9.42 9.42 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a9.556 9.556 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093.067.017.12.033.16.045.184.06.279.13.351.295l.029.073a3.475 3.475 0 0 1 .157.721c.055.485.051 1.178-.159 2.065Zm-4.828 7.475.04-.04-.107 1.081a1.536 1.536 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a8.548 8.548 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006ZM5.205 5c-.625.626-.94 1.351-1.004 2.09a8.497 8.497 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107-.04.039Zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a2.835 2.835 0 0 0-.045-.283 3.078 3.078 0 0 0-.3-.041Z" />
+                            <path
+                                d="M7.009 12.139a7.632 7.632 0 0 1-1.804-1.352A7.568 7.568 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z" />
+                        </svg>
+                    </div>
+
+                    <h4>Time saving</h4>
+                    <p class="mb-0">Create compelling landing pages in minutes, not hours. 
+                        Focus on growing your SaaS business, not on designing pages
+                        </p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                            height="32" fill="currentColor"
+                            class="bi bi-gem text-primary" viewBox="0 0 16 16">
+                            <path
+                                d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6l3-4zm11.386 3.785-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495 8 13.366l2.532-7.876-5.062.005zm-1.371-.999-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l5.113 6.817-2.192-6.82L1.5 5.5zm7.889 6.817 5.123-6.83-2.928.002-2.195 6.828z" />
+                        </svg>
+                    </div>
+
+                    <h4>Customization</h4>
+                    <p class="mb-0">Tailor your landing pages to your brand's unique identity and target audience.
+                        Stand out from the crowd with a professional and personalized touch.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                            height="32" fill="currentColor"
+                            class="bi bi-bullseye text-primary"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+                            <path
+                                d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                            <path
+                                d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>
+                    </div>
+                        <h4>Efficiency</h4>
+                        <p class="mb-0">Stay one step ahead with AI-generated content that anticipates trends and adapts to evolving consumer preferences. Stand
+                                        out from the competition with fresh, captivating landing pages that keep visitors coming back for more.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--forword together-->
+
+    <!--process-->
+    <section class="bg-light py-lg-10 py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center mb-lg-7 mb-5">
+                        <small class="text-uppercase text-primary ls-md fw-bold">our
+                            process</small>
+                        <h2 class="mt-2 mb-0">Our website design process
+                            explained</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="text-center mb-6 mb-lg-0 mx-4 mx-md-auto">
+                                <div
+                                    class="icon-shape icon-md bg-primary bg-opacity-10 text-primary rounded-circle fs-4 p-2 mb-lg-5 mb-3 fw-bold">
+                                    1</div>
+    
+                                <h4>Tell Us Your Business Idea</h4>
+                                <p class="mb-0">Make a brief description of your business.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center mb-6 mb-lg-0 mx-4 mx-md-auto">
+                                <div
+                                    class="icon-shape icon-md bg-primary bg-opacity-10 text-primary rounded-circle fs-4 p-2 mb-lg-5 mb-3 fw-bold">
+                                    2</div>
+    
+                                <h4>Tell Us Your Target Audience</h4>
+                                <p class="mb-0 mx-lg-5">Your target audience dictates the tone of the content.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center mb-6 mb-lg-0 mx-4 mx-md-auto">
+                                <div
+                                    class="icon-shape icon-md bg-primary bg-opacity-10 text-primary rounded-circle fs-4 p-2 mb-lg-5 mb-3 fw-bold">
+                                    3</div>
+    
+                                <h4>Recieve AI Generate Content</h4>
+                                <p class="mb-0">AI generated content presented to you in seconds.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--process-->
+
+
+
+    <!--speak with expert-->
+    <section class="my-9">
+        <div class="container" >
+            <div class="row line-pattern bg-primary-gradient rounded-3 p-7 g-0" >
+                <div class="col-lg-8 offset-lg-2 z-1">
+                    <div class="text-center py-md-7">
+                        <h2 class="h1 text-white-stable">Transform Your Marketing Game with AI-Powered Landing Page Content Generator</h2>
+                         <a href="{% url 'generate' %}" class="btn btn-white" >Generate Free Landing Page Content <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--speak with expert-->
+
+
+    <!--Have question start-->
+    <section class="py-xl-9 py-5 bg-gray-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6">
+                    <div class="mb-7 mb-md-0 me-lg-7">
+                        <div class="mb-4">
+                            <h2 class="mb-3">Still have questions?</h2>
+                            <p class="mb-0">We've answered a few FAQs to get you
+                                started. But please don't hesitate to reach out
+                                with more.</p>
+                        </div>
+    
+                        <form class="row needs-validation g-3" novalidate>
+                            <div class="col-md-12">
+                                <label for="scheduleEmailInput" class="form-label">
+                                    Email
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" class="form-control" id="scheduleEmailInput" required />
+                                <div class="invalid-feedback">Please
+                                    enter email.</div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="scheduleTextarea" class="form-label">Message</label>
+                                <textarea class="form-control" id="scheduleTextarea" placeholder="Write to us" rows="3"
+                                    required></textarea>
+                                <div class="invalid-feedback">Please
+                                    write message.</div>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary" type="submit">Let’s work
+                                    together!</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6">
+                    <div class="pb-4 border-bottom">
+                        <h4 class="mb-3">What is an AI-Powered Landing Page Content Generator?</h4>
+                        <p class="mb-0">An AI-Powered Landing Page Content Generator is a tool that uses artificial intelligence (AI) to create engaging,
+                        optimized, and high-quality content for your landing pages. It can help businesses and entrepreneurs save time, improve
+                        conversion rates, and boost their online presence.
+                        </p>
+                    </div>
+                    <div class="py-4 border-bottom">
+                        <h4 class="mb-3">How does the AI-Powered Landing Page Content Generator work?</h4>
+                        <p class="mb-0">
+                            The AI-Powered Landing Page Content Generator analyzes your business, industry, and target audience, then generates
+                            unique and SEO-friendly content tailored to your specific needs. It can create headlines, descriptions, calls to action,
+                            and even product or service descriptions.
+                        </p>
+                    </div>
+                    <div class="py-4 border-bottom">
+                        <h4 class="mb-3">Why should I use an AI-Powered Landing Page Content Generator instead of a human writer?</h4>
+                        <p class="mb-0">While human writers can create excellent content, they may require more time and resources. The AI-Powered Landing Page
+                        Content Generator can produce content quickly and consistently, ensuring your landing pages are always fresh and
+                        optimized. Additionally, AI can analyze vast amounts of data to create content that resonates with your audience and
+                        follows best practices for conversion optimization. However, it's always a good idea to review and edit the content for
+                        a personal touch and to ensure it aligns perfectly with your brand voice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Have question end-->
+
+
+
+
+
+    <footer class="mt-lg-7 pt-7 bg-light">
+        <div class="container">
+            <!-- Footer 4 column -->
+            <div class="row mb-1">
+                <div class="col-xl-4 col-lg-5 col-md-7">
+                    <div>
+                        <div class="mb-4">
+                            <a href="#">
+                                <img src="{% static 'images/logo.svg' %}" alt="logo" />
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="offset-xl-3 col-xl-5 col-md-5 text-md-end">
+                    <ul class="list-unstyled mb-0 py-3 py-lg-0">
+                        <li class="mb-2">
+                            Copyright © 2024
+
+                            <span class="text-primary"><a href="#">
+                                    LpcontentAI</a></span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container mt-1">
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <div class="small mb-3 mb-lg-0">
+                        Copyright © 2024
+
+                        <span class="text-primary"><a href="#" onclick="scrollToSection('hero')">LpcontentAI</a></span>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-md-end">
+                        <a href="#!" class="text-reset btn btn-instagram btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                            </svg>
+                        </a>
+                        <a href="#!" class="text-reset btn btn-facebook btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+                        </a>
+                        <a href="#!" class="text-reset btn btn-twitter btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </footer>
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+    </script>
+</body>
+
+</html>
